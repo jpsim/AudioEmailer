@@ -40,10 +40,10 @@
 		E83D32DD1576CF2E00B35A5C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E83D32DF1576CF2E00B35A5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E83D32E11576CF2E00B35A5C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E83D32E51576CF2E00B35A5C /* AudioEmailer-Info.plist */ = {isa = PBXFileReference; path = "AudioEmailer-Info.plist"; sourceTree = "<group>"; };
+		E83D32E51576CF2E00B35A5C /* AudioEmailer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AudioEmailer-Info.plist"; sourceTree = "<group>"; };
 		E83D32E71576CF2E00B35A5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E83D32E91576CF2E00B35A5C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E83D32EB1576CF2E00B35A5C /* AudioEmailer-Prefix.pch */ = {isa = PBXFileReference; path = "AudioEmailer-Prefix.pch"; sourceTree = "<group>"; };
+		E83D32EB1576CF2E00B35A5C /* AudioEmailer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AudioEmailer-Prefix.pch"; sourceTree = "<group>"; };
 		E83D32EC1576CF2E00B35A5C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E83D32ED1576CF2E00B35A5C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E83D32EF1576CF2E00B35A5C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 		E83D32F31576CF2E00B35A5C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		E83D32FA1576CF2E00B35A5C /* AudioEmailerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioEmailerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83D32FB1576CF2E00B35A5C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		E83D33031576CF2E00B35A5C /* AudioEmailerTests-Info.plist */ = {isa = PBXFileReference; path = "AudioEmailerTests-Info.plist"; sourceTree = "<group>"; };
+		E83D33031576CF2E00B35A5C /* AudioEmailerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AudioEmailerTests-Info.plist"; sourceTree = "<group>"; };
 		E83D33051576CF2E00B35A5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E83D33071576CF2E00B35A5C /* AudioTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioTests.h; sourceTree = "<group>"; };
 		E83D33081576CF2E00B35A5C /* AudioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioTests.m; sourceTree = "<group>"; };
@@ -91,8 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				E83D331F1576DF8800B35A5C /* BarGauge */,
-				E83D32E31576CF2E00B35A5C /* Audio */,
-				E83D33011576CF2E00B35A5C /* AudioTests */,
+				E83D32E31576CF2E00B35A5C /* AudioEmailer */,
+				E83D33011576CF2E00B35A5C /* AudioEmailerTests */,
 				E83D32DC1576CF2E00B35A5C /* Frameworks */,
 				E83D32DA1576CF2E00B35A5C /* Products */,
 			);
@@ -120,7 +120,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E83D32E31576CF2E00B35A5C /* Audio */ = {
+		E83D32E31576CF2E00B35A5C /* AudioEmailer */ = {
 			isa = PBXGroup;
 			children = (
 				E83D32EC1576CF2E00B35A5C /* AppDelegate.h */,
@@ -130,7 +130,7 @@
 				E83D32F21576CF2E00B35A5C /* ViewController.xib */,
 				E83D32E41576CF2E00B35A5C /* Supporting Files */,
 			);
-			path = Audio;
+			path = AudioEmailer;
 			sourceTree = "<group>";
 		};
 		E83D32E41576CF2E00B35A5C /* Supporting Files */ = {
@@ -144,14 +144,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E83D33011576CF2E00B35A5C /* AudioTests */ = {
+		E83D33011576CF2E00B35A5C /* AudioEmailerTests */ = {
 			isa = PBXGroup;
 			children = (
 				E83D33071576CF2E00B35A5C /* AudioTests.h */,
 				E83D33081576CF2E00B35A5C /* AudioTests.m */,
 				E83D33021576CF2E00B35A5C /* Supporting Files */,
 			);
-			path = AudioTests;
+			path = AudioEmailerTests;
 			sourceTree = "<group>";
 		};
 		E83D33021576CF2E00B35A5C /* Supporting Files */ = {
@@ -452,6 +452,7 @@
 				E83D330E1576CF2E00B35A5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E83D330F1576CF2E00B35A5C /* Build configuration list for PBXNativeTarget "AudioEmailerTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +461,7 @@
 				E83D33111576CF2E00B35A5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
