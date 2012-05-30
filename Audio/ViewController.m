@@ -88,4 +88,41 @@
     levelMeter.value = ([recorder averagePowerForChannel:0]+kdBOffset)/kdBOffset;
     levelMeter.holdPeak = TRUE;
 }
+
+- (IBAction)emailRecording:(id)sender {
+    MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+    picker.mailComposeDelegate = self;
+    
+    // Attach an image to the email
+    NSData *myData = [NSData dataWithContentsOfURL:recorder.url];
+    [picker addAttachmentData:myData mimeType:@"audio/mp4a-latm" fileName:@"bji-recording.m4a"];
+    
+    // Fill out the email body text
+    [picker setMessageBody:@"" isHTML:NO];
+    [self presentModalViewController:picker animated:YES];
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error 
+{   
+    // Notifies users about errors associated with the interface
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Result: canceled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Result: saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Result: sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Result: failed");
+            break;
+        default:
+            NSLog(@"Result: not sent");
+            break;
+    }
+    [self dismissModalViewControllerAnimated:YES];
+}
 @end

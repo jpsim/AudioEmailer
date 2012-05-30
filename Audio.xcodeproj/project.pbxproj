@@ -22,6 +22,7 @@
 		E83D33091576CF2E00B35A5C /* AudioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E83D33081576CF2E00B35A5C /* AudioTests.m */; };
 		E83D33131576CF3500B35A5C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E83D33121576CF3500B35A5C /* AVFoundation.framework */; };
 		E83D331E1576DF8500B35A5C /* F3BarGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = E83D331D1576DF8500B35A5C /* F3BarGauge.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E83D33271576E44200B35A5C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E83D33261576E44200B35A5C /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		E83D33121576CF3500B35A5C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E83D331C1576DF8500B35A5C /* F3BarGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3BarGauge.h; sourceTree = "<group>"; };
 		E83D331D1576DF8500B35A5C /* F3BarGauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3BarGauge.m; sourceTree = "<group>"; };
+		E83D33261576E44200B35A5C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E83D33271576E44200B35A5C /* MessageUI.framework in Frameworks */,
 				E83D33131576CF3500B35A5C /* AVFoundation.framework in Frameworks */,
 				E83D32DE1576CF2E00B35A5C /* UIKit.framework in Frameworks */,
 				E83D32E01576CF2E00B35A5C /* Foundation.framework in Frameworks */,
@@ -88,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				E83D331F1576DF8800B35A5C /* BarGauge */,
-				E83D33121576CF3500B35A5C /* AVFoundation.framework */,
 				E83D32E31576CF2E00B35A5C /* Audio */,
 				E83D33011576CF2E00B35A5C /* AudioTests */,
 				E83D32DC1576CF2E00B35A5C /* Frameworks */,
@@ -108,6 +110,8 @@
 		E83D32DC1576CF2E00B35A5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E83D33261576E44200B35A5C /* MessageUI.framework */,
+				E83D33121576CF3500B35A5C /* AVFoundation.framework */,
 				E83D32DD1576CF2E00B35A5C /* UIKit.framework */,
 				E83D32DF1576CF2E00B35A5C /* Foundation.framework */,
 				E83D32E11576CF2E00B35A5C /* CoreGraphics.framework */,
