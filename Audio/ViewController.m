@@ -59,11 +59,10 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 - (IBAction)record:(id)sender {
-//    NSLog(@"startRecording!");
     [recorder pause];
     [recorder prepareToRecord];
     recorder.meteringEnabled = YES;
@@ -74,11 +73,8 @@
 }
 
 - (IBAction)play:(id)sender {
-    
 	NSError *error;
 	player = [[AVAudioPlayer alloc] initWithContentsOfURL:recorder.url error:&error];
-//	player.numberOfLoops = -1;
-    
     [player play];
 }
 
