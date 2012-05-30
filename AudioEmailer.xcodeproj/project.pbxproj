@@ -381,8 +381,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Audio/AudioEmailer-Prefix.pch";
-				INFOPLIST_FILE = "Audio/AudioEmailer-Info.plist";
+				GCC_PREFIX_HEADER = "AudioEmailer/AudioEmailer-Prefix.pch";
+				INFOPLIST_FILE = "AudioEmailer/AudioEmailer-Info.plist";
 				PRODUCT_NAME = AudioEmailer;
 				WRAPPER_EXTENSION = app;
 			};
@@ -392,8 +392,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Audio/AudioEmailer-Prefix.pch";
-				INFOPLIST_FILE = "Audio/AudioEmailer-Info.plist";
+				GCC_PREFIX_HEADER = "AudioEmailer/AudioEmailer-Prefix.pch";
+				INFOPLIST_FILE = "AudioEmailer/AudioEmailer-Info.plist";
 				PRODUCT_NAME = AudioEmailer;
 				WRAPPER_EXTENSION = app;
 			};
