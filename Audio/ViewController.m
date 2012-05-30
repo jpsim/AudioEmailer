@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#define kdBOffset       40
+#define kMeterRefresh   0.03
 
 @interface ViewController ()
 
@@ -33,8 +35,6 @@
     if (err) { /* handle error */ }
     
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-//    NSLog(@"Documents directory: %@", 
-//          [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsDirectory error:nil]);
     
     NSURL *url = [NSURL fileURLWithPath:[documentsDirectory stringByAppendingPathComponent:@"recording.m4a"]];
     NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -63,13 +63,13 @@
 }
 
 - (IBAction)record:(id)sender {
-    NSLog(@"startRecording!");
+//    NSLog(@"startRecording!");
     [recorder pause];
     [recorder prepareToRecord];
     recorder.meteringEnabled = YES;
     [recorder record];
     [recorder updateMeters];
-    levelTimer = [[NSTimer alloc] initWithFireDate:[NSDate dateWithTimeIntervalSinceNow:0.0] interval:0.03 target:self selector:@selector(levelTimerCallback:) userInfo:nil repeats:YES];
+    levelTimer = [[NSTimer alloc] initWithFireDate:[NSDate dateWithTimeIntervalSinceNow:0.0] interval:kMeterRefresh target:self selector:@selector(levelTimerCallback:) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:levelTimer forMode:NSDefaultRunLoopMode];
 }
 
@@ -89,9 +89,7 @@
 
 - (void)levelTimerCallback:(NSTimer *)timer {
     [recorder updateMeters];
-    double avgPowerForChannel = pow(10, (0.05 * [recorder averagePowerForChannel:0]));
-    NSLog(@"Avg. Power: %f (%.2f dB)", [recorder averagePowerForChannel:0],avgPowerForChannel);
-    levelMeter.value = ([recorder averagePowerForChannel:0]+40)/40;
+    levelMeter.value = ([recorder averagePowerForChannel:0]+kdBOffset)/kdBOffset;
     levelMeter.holdPeak = TRUE;
 }
 @end
