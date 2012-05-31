@@ -86,7 +86,6 @@
 - (void)levelTimerCallback:(NSTimer *)timer {
     [recorder updateMeters];
     levelMeter.value = ([recorder averagePowerForChannel:0]+kdBOffset)/kdBOffset;
-    levelMeter.holdPeak = TRUE;
 }
 
 - (IBAction)emailRecording:(id)sender {
@@ -95,7 +94,7 @@
     
     // Attach an image to the email
     NSData *myData = [NSData dataWithContentsOfURL:recorder.url];
-    [picker addAttachmentData:myData mimeType:@"audio/mp4a-latm" fileName:@"bji-recording.m4a"];
+    [picker addAttachmentData:myData mimeType:@"audio/mp4a-latm" fileName:@"recording.m4a"];
     
     // Fill out the email body text
     [picker setMessageBody:@"" isHTML:NO];
@@ -125,4 +124,5 @@
     }
     [self dismissModalViewControllerAnimated:YES];
 }
+
 @end
